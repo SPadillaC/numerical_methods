@@ -16,7 +16,7 @@ O simplemente descargando la carpeta con los métodos y pegándola en la misma c
 
 ## ¿Cómo usar las funciones?
 
-# Ejemplo de uso
+### Ejemplo de uso
 ```python
 
 import numpy as np
@@ -55,7 +55,7 @@ plt.legend()
 plt.grid(True)
 plt.show()
 ```
-# Otro ejemplo, con múltiples métodos
+### Otro ejemplo, con múltiples métodos
 ```python
 
 import numpy as np
@@ -85,14 +85,14 @@ I_trapezoidal = integral_trapezoidal(f, a, b, n)
 print(f"La integral calculada numéricamente con el método de Riemann es: {I_riemann}")
 print(f"La integral calculada numéricamente con el método trapezoidal es: {I_trapezoidal}")
 ```
-# Si no recuerdan cómo usar un método, o qué argumentos tiene la función, pueden hacer lo siguiente:
+### Si no recuerdan cómo usar un método, o qué argumentos tiene la función, pueden hacer lo siguiente:
 ```python
 
 from numerical_methods import integral_simpson
 
 help(integral_simpson)
 ```
-# Esto les va a devolver:
+### Esto les va a devolver:
 ```md
 Help on function integral_simpson in module numerical_methods.integration:
 
