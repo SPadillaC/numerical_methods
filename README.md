@@ -16,9 +16,8 @@ O simplemente descargando la carpeta con los métodos y pegándola en la misma c
 
 ## ¿Cómo usar las funciones?
 
-```python
-
 # Ejemplo de uso
+```python
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -56,9 +55,8 @@ plt.legend()
 plt.grid(True)
 plt.show()
 ```
-```python
-
 # Otro ejemplo, con múltiples métodos
+```python
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -87,15 +85,37 @@ I_trapezoidal = integral_trapezoidal(f, a, b, n)
 print(f"La integral calculada numéricamente con el método de Riemann es: {I_riemann}")
 print(f"La integral calculada numéricamente con el método trapezoidal es: {I_trapezoidal}")
 ```
-```python
-
 # Si no recuerdan cómo usar un método, o qué argumentos tiene la función, pueden hacer lo siguiente:
+```python
 
 from numerical_methods import integral_simpson
 
 help(integral_simpson)
-
-# Esto les va a devolver:
 ```
-![image](https://github.com/SPadillaC/numerical_methods/assets/143565516/039f8254-ea76-49bc-919c-1b058bf74f9e)
+# Esto les va a devolver:
+```md
+Help on function integral_simpson in module numerical_methods.integration:
 
+integral_simpson(f, a, b, n)
+    Calcula la integral definida de una función f en el intervalo [a, b] utilizando la regla de Simpson.
+
+    Parámetros:
+    f : función
+        La función a integrar.
+    a : float
+        El límite inferior de integración.
+    b : float
+        El límite superior de integración.
+    n : int
+        El número de subintervalos en los que se divide [a, b]. Debe ser par.
+
+    Retorna:
+    float
+        La aproximación de la integral de f en [a, b].
+
+    Ejemplo de uso:
+    >>> def f(x):
+    >>>     return x**2
+    >>> integral_simpson(f, 0, 1, 100)
+    0.33333333333333337
+```
