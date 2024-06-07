@@ -9,7 +9,7 @@ Esta es una librería de métodos numéricos que incluye funciones para diferenc
 Puedes clonar este repositorio y usar los scripts directamente.
 
 ```sh
-git clone https://github.com/tu-usuario/numerical_methods.git
+git clone https://github.com/SPadillaC/numerical_methods.git
 ```
 
 O simplemente descarga la carpeta con los métodos y pégala en la misma carpeta donde planeas programar las clases o tareas.
