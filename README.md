@@ -1,6 +1,6 @@
 # Numerical Methods
 
-Esta es una librería de métodos numéricos que incluye funciones para diferenciación, integración, interpolación, y resolución de ecuaciones diferenciales, todas enseñadas y aplicadas en clases en Física Computacional III.
+Esta es una librería de métodos numéricos que incluye funciones para diferenciación, integración, interpolación y resolución de ecuaciones diferenciales, todas enseñadas y aplicadas en las clases de Física Computacional III.
 
 Última actualización: 06/06/2024
 
@@ -12,7 +12,7 @@ Puedes clonar este repositorio y usar los scripts directamente.
 git clone https://github.com/tu-usuario/numerical_methods.git
 ```
 
-O simplemente descargando la carpeta con los métodos y pegándola en la misma carpeta donde tienes planeado programar las clases.
+O simplemente descarga la carpeta con los métodos y pégala en la misma carpeta donde planeas programar las clases o tareas.
 
 ## ¿Cómo usar las funciones?
 
@@ -119,3 +119,4 @@ integral_simpson(f, a, b, n)
     >>> integral_simpson(f, 0, 1, 100)
     0.33333333333333337
 ```
+Si encuentran cualquier error en alguna de las funciones, por favor háganmelo saber.
