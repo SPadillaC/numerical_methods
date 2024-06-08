@@ -78,7 +78,7 @@ a = 0
 b = np.pi
 n = 1000  # número de subintervalos
 
-# Calcular la integral usando los métodos de Riemann, trapezoidal y Simpson
+# Calcular la integral usando los métodos de Riemann y trapezoidal
 I_riemann = integral_riemann(f, a, b, n)
 I_trapezoidal = integral_trapezoidal(f, a, b, n)
 
