@@ -70,41 +70,34 @@ plt.show()
 
 import numpy as np
 import matplotlib.pyplot as plt
-from numerical_methods import euler_method
+from numerical_methods import newton_raphson
 
-# Definir la ecuación diferencial
-def f(t, y):
-    if y > 1e5:  # Limitar el valor de y para evitar overflow
-        return np.inf
-    return y**2 * np.exp(t)
+# Definir la función y su derivada
+def f(x):
+    return x**3 - 2*x - 5
 
-# Condiciones iniciales
-y0 = 0.5
-t0 = 0
-tf = 1.4  # Ajuste de límite superior
-h = 0.01  # Reducir tamaño del paso
+def f_prime(x):
+    return 3*x**2 - 2
 
-# Solución analítica
-def analytical_solution(t):
-    C = 1 / y0 + 2  # Ajuste basado en la condición inicial
-    return 1 / (C - np.exp(t))
+# Punto inicial
+x0 = 2.0
 
-# Resolver la ecuación diferencial usando el método de Euler
-t_values, y_values = euler_method(f, y0, t0, tf, h)
+# Encontrar la raíz usando Newton-Raphson
+root = newton_raphson(f, f_prime, x0)
+print(f"La raíz encontrada es: {root}")
 
-# Calcular la solución analítica
-t_analytical = np.linspace(t0, tf, 100)
-y_analytical = analytical_solution(t_analytical)
+# Crear un rango de valores x para graficar
+x_values = np.linspace(0, 3, 400)
+y_values = f(x_values)
 
-# Graficar las soluciones
+# Graficar la función y la raíz encontrada
 plt.figure(figsize=(10, 6))
-plt.plot(t_values, y_values, 'o-', label='Método de Euler')
-plt.plot(t_analytical, y_analytical, '-', label='Solución Analítica')
-plt.xlabel('t')
-plt.ylabel('y')
-plt.xlim([0, 1.39])
-plt.ylim([0, 10])
-plt.title('Método de Euler vs Solución Analítica')
+plt.plot(x_values, y_values, label='f(x) = x^3 - 2x - 5')
+plt.axhline(0, color='black', lw=0.5, ls='--')
+plt.plot(root, f(root), 'ro', label=f'Raíz en x = {root:.4f}')
+plt.xlabel('x')
+plt.ylabel('f(x)')
+plt.title('Método de Newton-Raphson')
 plt.legend()
 plt.grid(True)
 plt.show()
