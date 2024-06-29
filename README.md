@@ -26,15 +26,15 @@ from numerical_methods import euler_method
 
 # Definir la ecuación diferencial
 def f(t, y):
-    if y > 1e5:  # Limitar el valor de y para evitar overflow
+    if y > 1e5:  # Limitar el valor de y (para evitar overflow)
         return np.inf
     return y**2 * np.exp(t)
 
 # Condiciones iniciales
 y0 = 0.5
 t0 = 0
-tf = 1.4  # Ajuste de límite superior
-h = 0.01  # Reducir tamaño del paso
+tf = 1.4
+h = 0.01
 
 # Solución analítica
 def analytical_solution(t):
