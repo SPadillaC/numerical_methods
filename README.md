@@ -9,7 +9,7 @@ Esta es una librería de métodos numéricos que incluye funciones para diferenc
 Puedes clonar este repositorio y usar los scripts directamente.
 
 ```sh
-git clone https://github.com/tu-usuario/numerical_methods.git
+git clone https://github.com/SPadillaC/numerical_methods.git
 ```
 
 O simplemente descarga la carpeta con los métodos y pégala en la misma carpeta donde planeas programar las clases o tareas.
@@ -136,7 +136,7 @@ a = 0
 b = np.pi / 2
 n = 1000  # número de subintervalos
 
-# Calcular la integral usando los métodos de Riemann, trapezoidal y Simpson
+# Calcular la integral usando los métodos de Riemann y trapezoidal
 I_riemann = integral_riemann(f, a, b, n)
 I_trapezoidal = integral_trapezoidal(f, a, b, n)
 
